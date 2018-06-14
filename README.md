@@ -44,47 +44,47 @@ We will go the gallery and search for Lets Encrypt
 
 Install the module and go click play
 
-![image of install-and-play-letsencrypt](/images/install-and-play-letsencrypt.PNG
+![image of install-and-play-letsencrypt](/images/install-and-play-letsencrypt.PNG)
 
 If we get the following message the workaround is to stop and start the WebApp
 
-![image of no-route-registered-letsencrypt](/images/no-route-registered-letsencrypt.PNG
+![image of no-route-registered-letsencrypt](/images/no-route-registered-letsencrypt.PNG)
 
 If this is successful we will see the Lets Encrypt Authentication Settings
 
-![image of Lets-encrypt-authentication-settings](/images/Lets-encrypt-authentication-settings.PNG
+![image of Lets-encrypt-authentication-settings](/images/Lets-encrypt-authentication-settings.PNG)
 
 We will need to create a service principal for my subscription, so LetsEncrypt can access the WebApp application settings and bind the certificate
 
-![image of create-sp](/images/create-sp.PNG
+![image of create-sp](/images/create-sp.PNG)
 
 We can see the service principal on the Azure portal, on the WebApp go to Access Control and select the name of the service principal. Then under properties you will see the same values we got using the Powershell command
 
-![image of sp-azure-portal](/images/sp-azure-portal.PNG
+![image of sp-azure-portal](/images/sp-azure-portal.PNG)
 
 Now back to the authentication settings of Lets Encrypt, we will need the TenantID, SubscriptionID, ClientID, ClientSecret and RG name
 ClientID is the value you get as appID when created the service principal, ClientSecret is the password
 
 TenantID can be easily seen here:
 
-![image of tenant-id](/images/tenant-id.PNG
+![image of tenant-id](/images/tenant-id.PNG)
 
 ClientID can be seen here on the portal:
 
-![image of client-id](/images/client-id.PNG
+![image of client-id](/images/client-id.PNG)
 
 Once we pass this checks we are almost done
 
-![image of letsencrypt-result](/images/letsencrypt-result.PNG
+![image of letsencrypt-result](/images/letsencrypt-result.PNG)
 
 We will hit next and create our SSL certificate, assigned to the custom domain
 
-![image of certificate-installed](/images/certificate-installed.PNG
+![image of certificate-installed](/images/certificate-installed.PNG)
 
 Finally, we just check on the WebApp SSL bindings section that the certificate is being assigned to my custom domain
 
-![image of sslbindings](/images/sslbindings.PNG
+![image of sslbindings](/images/sslbindings.PNG)
 
 And the final check is to go to the site check you use HTTPS 
 
-![image of https-working](/images/https-working.PNG
+![image of https-working](/images/https-working.PNG)
